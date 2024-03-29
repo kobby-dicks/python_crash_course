@@ -1,2 +1,5 @@
-Data = [value for value in range(1,29)]
-print(Data[1:10])
+names = ['kwame', 'kojo', 'yaw']
+attendance = names[:]
+print('the list of members who were present')
+attendance.append('ama')
+print(attendance)
