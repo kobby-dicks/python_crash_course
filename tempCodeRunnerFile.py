@@ -1,2 +1,2 @@
-Data = [value for value in range(0,250)] #doing just a normal list
-print(Data)
+Data = [value for value in range(1,29)]
+print(Data[1:10])
