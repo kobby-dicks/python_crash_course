@@ -41,3 +41,13 @@ print(Data)
 Data = [value for value in range(1,29)]
 print(Data[1:10])
 
+#slicing
+names = ['kwame' , 'kojo', 'yaw']
+print(f'Has anyone set eyes on {names[-1].title()}?')
+
+# making a copy of a list
+names = ['kwame', 'kojo', 'yaw']
+attendance = names[:]
+print('the list of members who were present')
+attendance.append('ama')
+print(attendance)
