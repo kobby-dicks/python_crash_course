@@ -51,3 +51,28 @@ attendance = names[:]
 print('the list of members who were present')
 attendance.append('ama')
 print(attendance)
+
+# tuples. these are immutable list. thus the content of a tuple cannot be changed
+fixed_manu = ('rice', 'joloff', 'banku')
+fixed_manu[0] = 'yam' # if we try to change rice to yam, it is not possible in this case
+print(fixed_manu[0].title())
+
+# tuple containing numbers 
+numbers = (1,2,3,4,5,6,7,8,9,10)
+print(numbers)
+print(numbers[0])
+print(numbers[-1])
+print(numbers[-2])
+print(numbers[-3])
+
+manues = ('rice', 'banku')
+for manu in manues:
+    print(manues)
+
+# OR
+Dimenssions = (100,200)
+#print(Dimenssions[0]) this could be done in another way using a loop
+#print(Dimenssions[1])
+for Dimenssion in Dimenssions:
+    print(Dimenssion)
+    

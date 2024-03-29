@@ -1,5 +1,5 @@
-names = ['kwame', 'kojo', 'yaw']
-attendance = names[:]
-print('the list of members who were present')
-attendance.append('ama')
-print(attendance)
+Dimenssions = (100,200)
+#print(Dimenssions[0])
+#print(Dimenssions[1])
+for Dimenssion in Dimenssions:
+    print(Dimenssion)
