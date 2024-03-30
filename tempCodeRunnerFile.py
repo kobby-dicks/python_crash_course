@@ -1,7 +1,7 @@
-requested_toppings = ['mashroom', 'meat', 'chicken']
-for requested_topping in requested_toppings:
-    if requested_topping == 'meat':
-         print(f"We are out of {requested_topping}.")
-    else:
-        print(f'{requested_topping} will be added')   
-print('Your oder will be ready in 5 minutes.')
+requested_toppings = []
+if requested_toppings:
+    for requested_topping in requested_toppings:
+        print(f'Adding {requested_topping}')
+    print('Your pizza will be ready in 3 minutes.')
+else:
+    print('Are you sure you want a plain pizza?')
