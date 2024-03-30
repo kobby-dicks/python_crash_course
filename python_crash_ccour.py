@@ -123,7 +123,7 @@ else:
     print('Your admission cost is £40.')
 
 # still on if-elif-else syntax
-weight = 550
+weight = 30
 if weight < 50:
     print('you have a healthy weight.')
 elif weight < 100:
@@ -132,3 +132,16 @@ elif weight >= 100:
     print('You are overweight')
 else:
     print('You have gained a lot of weight this month.')
+
+#another way to write this is
+weight = 19
+if weight < 4:
+    metal_to_lift = 0
+elif weight <= 18:
+    metal_to_lift = 25
+elif weight <= 25:
+    metal_to_lift = 40
+else:
+    metal_to_lift= 100
+print(f'You can try the {metal_to_lift}kg')
+

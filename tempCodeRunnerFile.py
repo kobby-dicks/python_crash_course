@@ -1,9 +1,10 @@
-weight = 550
-if weight < 50:
-    print('you have a healthy weight.')
-elif weight < 100:
-    print('Do a lot more exercise!')
-elif weight >= 100:
-    print('You are overweight')
+weight = 19
+if weight < 4:
+    metal_to_lift = 0
+elif weight <= 18:
+    metal_to_lift = 25
+elif weight <= 25:
+    metal_to_lift = 40
 else:
-    print('You have gained a lot of weight this month.')
+    metal_to_lift= 100
+print(f'You can try the {metal_to_lift}kg')
