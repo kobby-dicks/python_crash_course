@@ -52,9 +52,11 @@ print('the list of members who were present')
 attendance.append('ama')
 print(attendance)
 
-# tuples. these are immutable list. thus the content of a tuple cannot be changed
+# tuples. these are immutable list. thus the content of a tuple cannot be 
+#changed
 fixed_manu = ('rice', 'joloff', 'banku')
-fixed_manu[0] = 'yam' # if we try to change rice to yam, it is not possible in this case
+fixed_manu[0] = 'yam' # if we try to change rice to yam, it is not possible 
+#in this case
 print(fixed_manu[0].title())
 
 # tuple containing numbers 
@@ -64,6 +66,7 @@ print(numbers[0])
 print(numbers[-1])
 print(numbers[-2])
 print(numbers[-3])
+
 
 manues = ('rice', 'banku')
 for manu in manues:
@@ -83,4 +86,20 @@ Dimenssions = (500,200)
 for Dimenssion in Dimenssions:
     print(f'the modified dimenssions: {Dimenssion}')
 
-    
+
+# if statements. looping with if statements 
+cars = ['benz' , 'toyota' , 'suzuki', 'bmw']
+for car in cars:
+    if car == 'bmw':
+        print(car.upper())
+    else:
+        print(car.title())
+
+# conditional tests
+
+banned_users = ['Killman' 'swatman' 'byran']
+for banned_user in banned_users:
+    if banned_user == 'Killman':
+        print(f'{banned_user.title()}, Please add your comment')
+    else:
+        print('your account has been banned!!')
