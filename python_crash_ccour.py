@@ -96,7 +96,7 @@ for car in cars:
         print(car.title())
 
 # conditional tests
-
+# if-else syntax works for two conditions.
 banned_users = ['Killman' 'swatman' 'byran']
 for banned_user in banned_users:
     if banned_user == 'Killman':
@@ -104,3 +104,31 @@ for banned_user in banned_users:
     else:
         print('your account has been banned!!')
 
+# using if-else statements
+age = 19
+if age >= 18:
+    print('You are eligible to register') #this works if the test is true
+    print('Fill out the form below')
+else:
+    print('sorry, you are not eligible to register.') #this works if age is less
+    print('Try another time.')
+
+# the if-elif-else syntax. it is used to test more than one conditions. 
+age = 54
+if age < 4:
+    print('Your admission cost is $0')
+elif age < 18:
+    print('Your admission cost is $25')
+else:
+    print('Your admission cost is £40.')
+
+# still on if-elif-else syntax
+weight = 550
+if weight < 50:
+    print('you have a healthy weight.')
+elif weight < 100:
+    print('Do a lot more exercise!')
+elif weight >= 100:
+    print('You are overweight')
+else:
+    print('You have gained a lot of weight this month.')
