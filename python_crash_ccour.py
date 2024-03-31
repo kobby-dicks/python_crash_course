@@ -226,4 +226,6 @@ speed = aliens_0.get('speed', 'Maximum speed reached.') # there is no key value
 # python will return None.
 print(speed)
 
+# I will be back soon
+
 
