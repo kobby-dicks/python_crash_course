@@ -1,6 +1,6 @@
 # doing for loops
 names = [
-    "samuel oklu" , "prince asare" ,"jeremiaj adjetey"
+    "samuel oklu" , "prince asare" ,"jeremiah adjetey"
 ]
 for name in names:
     print(f'How are you {name.title()}')
@@ -68,23 +68,23 @@ print(numbers[-2])
 print(numbers[-3])
 
 
-manues = ('rice', 'banku')
-for manu in manues:
-    print(manues)
+manus = ('rice', 'banku')
+for manu in manus:
+    print(manus)
 
 # OR
-Dimenssions = (100,200)
-#print(Dimenssions[0]) this could be done in another way using a loop
-#print(Dimenssions[1])
-for Dimenssion in Dimenssions:
-    print(Dimenssion)
+Dimensions = (100,200)
+#print(Dimensions[0]) this could be done in another way using a loop
+#print(Dimensions[1])
+for Dimension in Dimensions:
+    print(Dimension)
 
 # modifying the original tuple by assigning a new values
-Dimenssions = (500,200)
-#print(Dimenssions[0]) this could be done in another way using a loop
-#print(Dimenssions[1])
-for Dimenssion in Dimenssions:
-    print(f'the modified dimenssions: {Dimenssion}')
+Dimensions = (500,200)
+#print(Dimensions[0]) this could be done in another way using a loop
+#print(Dimensions[1])
+for Dimension in Dimensions:
+    print(f'the modified dimensions: {Dimension}')
 
 
 # if statements. looping with if statements 
@@ -146,7 +146,7 @@ else:
 print(f'You can try the {metal_to_lift}kg')
 
 # using if statements with lists
-requested_toppings = ['mashroom', 'meat', 'chicken']
+requested_toppings = ['mushroom', 'meat', 'chicken']
 for requested_topping in requested_toppings:
     if requested_topping == 'meat':
          print(f"We are out of {requested_topping}.")

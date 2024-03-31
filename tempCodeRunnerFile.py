@@ -1,7 +1,5 @@
-requested_toppings = []
-if requested_toppings:
-    for requested_topping in requested_toppings:
-        print(f'Adding {requested_topping}')
-    print('Your pizza will be ready in 3 minutes.')
-else:
-    print('Are you sure you want a plain pizza?')
+Dimensions = (500,200)
+#print(Dimensions[0]) this could be done in another way using a loop
+#print(Dimensions[1])
+for Dimension in Dimensions:
+    print(f'the modified dimensions: {Dimension}')
