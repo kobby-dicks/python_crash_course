@@ -163,4 +163,6 @@ if requested_toppings:
 else:
     print('Are you sure you want a plain pizza?')
     
+# Dictionaries. these helps to build any form of model that you cal=n use 
+# to create anything you want.
 
