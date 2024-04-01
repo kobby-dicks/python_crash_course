@@ -227,7 +227,7 @@ speed = aliens_0.get('speed', 'Maximum speed reached.') # there is no key value
 print(speed)
 
 # looping through a dictionary
-# looping through all keys and values in a dictionary
+# looping through all keys-value pairs in a dictionary
 
 favorite_movies = {
     'John Wick' : '2017',
@@ -238,7 +238,7 @@ favorite_movies = {
 for movie, year_released in favorite_movies.items():
     print(f'\n{movie} was released in {year_released}')
 
-# another try of the looping through a dictionary
+# another try of the looping through all key-value pairs in a dictionary
 Manu = {
     'Mondays' : 'Rice and vegetable stew',
     'Tuesdays' : 'Chicken and vegetable stew',
@@ -250,6 +250,27 @@ Manu = {
 }
 for Day, Dish in Manu.items():
     print(f'\n This is the manu for {Day}: {Dish}')
+
+#looping through keys in a dictionary
+favorite_movies = {
+    'John wick' : '2017',
+    'Killer Bean' : '2014',
+    'The Avengers' : '2012',
+    'Most wanted' : '2011'
+}
+Top_two_favorites = ['John wick' , 'Most wanted']
+year = ['2017', '2011']
+for title in favorite_movies.keys():
+    print(f'\n{title}')
+if title in Top_two_favorites:
+    x = favorite_movies[title]
+    print(f'\n{title} was released in {x}') 
+for year_released in favorite_movies.values():
+    print(f'\n{year_released}')
+if year_released in year:
+    y = year 
+    print(f'\n my favorite movies were released in \n{y}')
+
 
 
 
