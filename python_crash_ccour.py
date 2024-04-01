@@ -226,6 +226,32 @@ speed = aliens_0.get('speed', 'Maximum speed reached.') # there is no key value
 # python will return None.
 print(speed)
 
-# I will be back soon
+# looping through a dictionary
+# looping through all keys and values in a dictionary
+
+favorite_movies = {
+    'John Wick' : '2017',
+    'Killer Bean' : '2014',
+    'The Avengers' : '2012',
+    'Most wanted' : '2011'
+}
+for movie, year_released in favorite_movies.items():
+    print(f'\n{movie} was released in {year_released}')
+
+# another try of the looping through a dictionary
+Manu = {
+    'Mondays' : 'Rice and vegetable stew',
+    'Tuesdays' : 'Chicken and vegetable stew',
+    'Wednesdays' : 'Chicken and vegetable stew',
+    'Thursdays' : 'Chicken and vegetable stew',
+    'Fridays' : 'Chicken and vegetable stew',
+    'Saturdays' : 'Chicken and vegetable stew',
+    'Sundays' : 'Chicken and vegetable stew'
+}
+for Day, Dish in Manu.items():
+    print(f'\n This is the manu for {Day}: {Dish}')
+
+
+
 
 
