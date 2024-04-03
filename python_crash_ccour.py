@@ -347,8 +347,37 @@ for username, user_info in users.items():
     print(f'location: {location}')
     print(f'studio name: {studio_name}')
 
+# inputs() method
+message = input('Input your FullName:' )
+print(f'Welcome {message}')
 
-        
+# defining a variable and assigning the variable to the input message.
+prompt = 'Enter your E-mail.'
+prompt += f'\nWe only accept gmail accounts.'
+email = input(prompt)
+print(f'You are signed in as \n{email}')
+
+# using the int() function to convert a user's input which was a string 
+# to a number. 
+prompt = 'How old are you?.'
+prompt += f'\nWe do not accept minors on this platform.'
+Age = input(prompt)
+age = int(Age)
+if age >= 18: # making a comparison with user input.
+    print(f'\nyou qualify to join this page.')
+else:
+    print(f'\nyou are too young to join this page.')
+#print(f'did you sa{age}?')
+
+# modulus % operator. this returns the remainder after a division.
+# it always returns the value 0 if the number is even.
+User_number = input('Input your number:')
+user_input = int(User_number)
+if user_input % 2 == 0:
+    print(f'\nyou entered an even number.')
+else:
+    print(f'\nyou entered an odd number.')
+
 
 
 
