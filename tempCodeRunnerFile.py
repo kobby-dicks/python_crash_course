@@ -1,12 +1,24 @@
-favorite_languages = {
-    'John' : 'python',
-    'Christian' : 'PHP',
-    'Joseph' : 'Java',
-    'Seth' : 'C++'
+users = {
+    'Kaywa' : {
+        'Firstname' : 'Kwesi',
+        'Last Name' : 'Kaywa',
+        'Location' : 'Accra',
+        'Studio Name' : 'Kaywa Sounds',
+    },
+
+    'Hammer' : {
+        'Firstname' : 'Alfred',
+        'Last Name' : 'Hamilton',
+        'Location' : 'Kumasi',
+        'Studio Name' : 'The Last 2',
+    }
 }
-friends = ['John', 'Seth']
-for name in favorite_languages:
-    print(f'\n Hi {name.title()}')
-    if name in friends:
-        language = favorite_languages[name]
-        print(f'\n {name.title()} likes {language.title()}')
+
+for username, user_info in users.items():
+    print(f'\nusername: {username}')
+    fullname = f"{user_info['Firstname']} {user_info['Last Name']}"
+    location = user_info['Location']
+    studio_name = user_info['Studio Name']
+    print(f'full name: {fullname}')
+    print(f'location: {location}')
+    print(f'studio name: {studio_name}')
