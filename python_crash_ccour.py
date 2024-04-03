@@ -286,7 +286,39 @@ for name in favorite_languages:
         language = favorite_languages[name]
         print(f'\n {name.title()} likes {language.title()}')
 
-    
+# nesting. this is a list containing dictionaries of identical nature 
+aliens_0 = {'color' : 'green' , 'Points' : '5' , 'speed' : 'slow'}
+aliens_1 = {'color' : 'yellow' , 'Points' : '10' , 'speed' : 'medium'}
+aliens_2 = {'color' : 'red' , 'Points' : '15' , 'speed' : 'fast'}
+aliens = [aliens_0, aliens_1, aliens_2]
+print(aliens)
+
+# another way to do this is to use range() method to print a number of aliens
+# and modify how each of them behaves
+aliens = []
+for total_alien in range(20):
+    new_alien = {'color' : 'green', 'points' : '5', 'speed' : 'slow'}
+    aliens.append(new_alien)
+#print(f'{len(aliens)}') #to check the length of of the alien list
+# or 
+#print({aliens}) # to print the elements in the alien list
+
+# modify the first 3 aliens to look yellow
+for alien in aliens[:5]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['point'] = '10'
+        alien['speed'] = 'medium'
+    elif alien['color'] == 'yellow':
+        alien['color'] = 'red'
+        alien['point'] = '15'
+        alien['speed'] = 'fast'
+print(aliens)
+
+
+
+
+
         
 
 
