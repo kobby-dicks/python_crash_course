@@ -378,6 +378,30 @@ if user_input % 2 == 0:
 else:
     print(f'\nyou entered an odd number.')
 
+# using the while loop
+# the while loop keeps a code running until the user decides to quit.
+current_number = 1
+while current_number <= 10:
+    print(current_number)
+    current_number += 1
+
+# another scenario 
+prompt = 'How old are you?.'
+prompt += f"\nminors are not allowed. \nEnter 'quit' to end the program."
+Age = input(prompt)
+age = int(Age)
+if age >= 18:
+    print(f'\nyou qualify to join this page.')
+message = ""
+while message != 'quit':
+    message = input(prompt)
+print('Your session has ended.')
+
+
+
+
+
+
 
 
 
