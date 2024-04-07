@@ -387,25 +387,202 @@ while current_number <= 10:
 
 # another scenario 
 prompt = 'How old are you?.'
-prompt += f"\nminors are not allowed. \nEnter 'quit' to end the program."
+prompt += f"\nminors are not allowed."
 Age = input(prompt)
 age = int(Age)
 if age >= 18:
     print(f'\nyou qualify to join this page.')
+elif age <= 18:
+    print(f'\nyou are too young to join this page.')
+    print('\nType Exit to end the session.')
 message = ""
-while message != 'quit':
+while message != 'Exit':
     message = input(prompt)
 print('Your session has ended.')
 
+# using flags. flags determine whether the program should continue to run 
+# while certain conditions defined in the flag are true
+
+prompt = 'How old are you?.'
+prompt += f"\nminors are not allowed."
+active = True 
+while active:
+    message = input(prompt)
+
+    if message == 'quit':
+        active = False
+        break
+    else: 
+        print(message)
+
+# using continue statement to loop back to the beginning of the code
+# this code is to print out the odd numbers or numbers NOT divisible by 2
+current_number = 0
+while current_number <= 21:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+    print(current_number)   
+      
+# using while loop with list and dictionaries
+unverified_users = ['kwesi' , 'yaw', 'mandela']
+verified_users = []
+while unverified_users:
+    user = unverified_users.pop()
+    if user in verified_users:
+        continue
+    verified_users.append(user)
+    print(f'\n{user} has been verified.')
+
+# another example is 
+unverified_users = ['kwesi' , 'yaw', 'mandela']
+verified_users = []
+while unverified_users:
+    user = unverified_users.pop()
+    print(f'verifying user: {user.title()}')
+    verified_users.append(user)
+print(f'\nthe following users have been verified:')
+for user in verified_users:
+    print(f'\n{user.title()}')
+
+# removing all instances of a specific value in a list
+pets = ['cat', 'dog', 'rabbit', 'cat', 'dog', 'cat']
+#print(pets)
+while 'cat' in pets:
+    pets.remove('cat')
+print(pets)
+
+# chapter 8. Functions
+"""A function allows you to define how program should operate in a particular 
+way and it is fixed to that function only. def is used to define the function
+and it followed rightly by name of the function and information about the 
+function is held in the parenthesis."""
+def greetings():
+    """A simple greetings to the wold."""
+    print('Hello!')
+greetings()
+
+# adding information about the function in its parenthesis.
+def greetings(username):
+    """A simple greetings to the wold."""
+    print(f'Hello ! {username.title()}')
+greetings('Gamba')  
+greetings('Seth')
 
 
+# parameters and arguments. 
+def user_age(age): # age in this case is a parameter
+    """A function to calculate the age of a user."""
+    print(f'You are {age} years old.')
+user_age(20) # 20 in this case is an argument. 
+
+# having more than one parameter
+def user_age(age, weight):
+    """A function to calculate the age of a user."""
+    print(f'You are {age} years old.')
+    print(f'Your weight is {weight} kg.')
+user_age(age=20, weight='120') #fixed keyword argument.
+
+# using default values. a default value can be set to a parameter so that 
+# that become the output when an argument is not made.
+def pets(name, animal_type='cat'):   # cat is set as default in this case.
+    """A function of pets and their names."""
+    print(f"my pet's name is {name}")
+    print(f" It is a {animal_type}")
+pets('Tom')
+
+# if you want a specific argument as a second argument instead of a cat,
+# specify the argument. 
+def pets(name, animal_type='cat'):   # cat is set as default in this case.
+    """A function of pets and their names."""
+    print(f"my pet's name is {name}")
+    print(f" It is a {animal_type}")
+pets('Singi', animal_type='bird') # the argument bird in this case overrides 
+# the default value of cat.
+
+# using return value 
+def get_formatted_name(first_name, last_name):
+    """A function to get the formatted name."""
+    first_name = input('Enter your first name:')
+    last_name = input('Enter your last name:')
+    fullname = f'{first_name.title()} {last_name.title()}'
+    return fullname.title()
+Owner = get_formatted_name('firstname', 'lastname',)
+print(f' Welcome: {Owner}')
+
+# making an optional parameter like middle_name in the previous code.
+def get_formatted_name(first_name, last_name, middle_name=''):
+    """A function to get the formatted name."""
+    first_name = input('Enter your first name: ')
+    last_name = input('Enter your last name:')
+    if middle_name:
+        middle_name = input('Enter your middle name: ')
+        fullname = f'{first_name.title()} {middle_name.title()} {last_name.title()}'
+    else:
+        fullname = f'{first_name.title()} {last_name.title()}'
+    return fullname.title()
+Owner = get_formatted_name('firstname', 'lastname', 'middle_name')
+print(f' Welcome: {Owner}')
 
 
+# returning a dictionary 
+def greeting_users(names):
+    """A function to greet users."""
+    for name in names:
+        msg = f'hello {name.title()}'
+        print(msg)
+usernames = ['king', 'bross', 'koo', 'weter']
+greeting_users(usernames)
 
 
+# passing arguments into a function using *args and **kwargs
+# this will help to pass a limitless number of arguments into a function othe 
+# than the positional type.
+
+def List_subjects(*subjects):
+    print(subjects, type(subjects))
+
+List_subjects('English', 'Maths', 'Financial Accounting', 'Business Management')
+
+# another example
+def add(*args):   # this will return a tuple
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+print(add(1,2,3,4,5)) # more numbers can be added in the next call
+print(add(2,3,4,5,6,8,9,12,45,56,))
 
 
+def team(*members, **features): # this returns a tuple and a dictionary
+    for member in members:
+        print(member)
+    
+    
+    for key,value in features.items():
+        print("{}: {}".format(key,value))
 
+print(
+    team
+      ("Abena", "Marilyn","kwame", Name = "FemCode", Project = "Answers", 
+     Number = "Two Members", gender = "male", school =  "aggrey",
+     )
+)
 
+def Number_of_fruits(*args, **kwargs,):
+    print(args, type(args))
+    print(kwargs, type(kwargs))
+    
+
+Number_of_fruits('baskets', 'bowls', mangoes = 20, ornages = 15, passion_fruits = 45)
+print(Number_of_fruits)
+
+def add(x, *any_number):
+    for num in any_number:
+        x += num
+        print(x)
+
+add(2,3,4,5,1)
 
 
