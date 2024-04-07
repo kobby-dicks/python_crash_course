@@ -1,6 +1,2 @@
-def add(x, *any_number):
-    for num in any_number:
-        x += num
-        print(x)
-
-add(2,3,4,5,1)
+import args_kwargs
+args_kwargs.Number_of_fruits('names of fruits in ghana')
