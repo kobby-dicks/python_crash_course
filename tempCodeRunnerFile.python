@@ -1,4 +1,7 @@
-from args_kwargs import Number_of_fruits
-Number_of_fruits('manoges', 'oranges', 'passion', 'strawberries',
-                             mangoes = 20, oranges = 25, passion = 50, 
-                             strawberries = 100)
+from args_kwargs import add as A #giving a module an alias.
+A(2,4,6,8,10)
+
+from args_kwargs import *
+add(1,2,3,4,5)
+
+Number_of_fruits('lime', 'soda')
