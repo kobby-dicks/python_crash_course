@@ -1,4 +1,4 @@
-
+"""A model of a car"""
 class Car:
     """making a new car"""
     def __init__(self, brand, model, year, engine_type):
@@ -6,6 +6,12 @@ class Car:
         self.model = model
         self.year = year
         self.engine_type = engine_type
+
+    def descriptive_name(self):
+        long_name = (
+        f'{self.brand}, {self.model}, {self.year}, {self.engine_type}'
+        )
+        return long_name.title()
 
     def diesel_car(self):
         self.engine_type = 'Diesel'
@@ -35,7 +41,7 @@ class ElectricCar(Car):
         print(f'This car has {self.odometer_reading} miles on it.')
         print(f'This car has a {self.engine_type} engine.')
 
-My_latest_car = ElectricCar('Mazda', 2114, 2022, 'Hybrid')
+My_latest_car = Battery('50', 'Lithium')
 print(My_latest_car.describe_battery())
 
 my_first_car = Car('Tata', 'Samira', 2019, 'diesel')

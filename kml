@@ -1,15 +1,15 @@
 import args_kwargs
-args_kwargs.Number_of_fruits('manoges', 'oranges', 'passion', 'strawberries',
-                             mangoes = 20, oranges = 25, passion = 50, 
-                             strawberries = 100
-                             )
+args_kwargs.Number_of_fruits(
+        'manoges', 'oranges', 'passion', 'strawberries',
+        mangoes = 20, oranges = 25, passion = 50, 
+        strawberries = 100)
 
 
 
 from args_kwargs import Number_of_fruits
-Number_of_fruits('manoges', 'oranges', 'passion', 'strawberries',
-                             mangoes = 20, oranges = 25, passion = 50, 
-                             strawberries = 100)
+Number_of_fruits(
+        'manoges', 'oranges', 'passion', 'strawberries',
+        mangoes = 20, oranges = 25, passion = 50, strawberries = 100)
 
 
 from args_kwargs import add #calling the function direct form the module.
